@@ -1,0 +1,9 @@
+.base {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  height: 8vw;
+  background-color: beige;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}

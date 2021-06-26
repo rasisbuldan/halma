@@ -1,0 +1,11 @@
+.base {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 70%;
+  background-color: #22a6b3;
+  border: 3pt solid #1c8d98;
+  border-radius: 50%;
+  font-size: 200%;
+}

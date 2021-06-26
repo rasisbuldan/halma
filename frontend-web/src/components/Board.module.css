@@ -1,0 +1,6 @@
+.base {
+  width: 40vw;
+  aspect-ratio: 1;
+  border: 2px solid teal;
+  margin: 20px auto 0 auto;
+}
