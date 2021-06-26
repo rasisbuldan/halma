@@ -2,10 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70%;
-  height: 70%;
-  background-color: #22a6b3;
-  border: 3pt solid #1c8d98;
+  width: 60%;
+  height: 60%;
+  background-color: #f0932b;
+  border: 2pt solid #1c8d98;
   border-radius: 50%;
-  font-size: 200%;
+  font-size: 150%;
+  font-weight: 600;
+  color: white;
 }
