@@ -7,6 +7,7 @@ type SquareProps = {
   id: number;
   backgroundColor: BackgroundColor;
   pieceColor: PieceColor;
+  hasPiece: boolean;
 };
 
 export default function Square(props: SquareProps) {
@@ -20,7 +21,7 @@ export default function Square(props: SquareProps) {
             : props.backgroundColor.secondary,
       }}
     >
-      <Piece id={props.id} pieceColor={props.pieceColor} />
+      {props.hasPiece && <Piece id={props.id} pieceColor={props.pieceColor} />}
     </div>
   );
 }

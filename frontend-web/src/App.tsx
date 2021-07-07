@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
 import Home from "./pages/Home";
 
 export default function App() {
@@ -14,13 +16,15 @@ export default function App() {
         ></link>
       </head>
       <div className="App">
-        <Router>
-          <Switch>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
-        </Router>
+        <DndProvider backend={HTML5Backend}>
+          <Router>
+            <Switch>
+              <Route path="/">
+                <Home />
+              </Route>
+            </Switch>
+          </Router>
+        </DndProvider>
       </div>
     </>
   );

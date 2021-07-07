@@ -5,11 +5,11 @@ import Square from "./Square";
 
 type BoardProps = {
   size: number;
+  boardPiece: Array<Array<number>>;
+  colorMap: Array<PieceColor>;
 };
 
 export default function Board(props: BoardProps) {
-  const boardPiece = Array.from({ length: props.size ** 2 }, (_, i) => i + 1);
-
   return (
     <div
       className={styles.base}
@@ -19,26 +19,18 @@ export default function Board(props: BoardProps) {
         })`,
       }}
     >
-      {boardPiece.flat().map((piece) => (
-        <Square
-          id={piece}
-          key={piece}
-          backgroundColor={BackgroundColor.GREY}
-          pieceColor={PieceColor.BLUE}
-        />
-      ))}
-
-      {/* <table className={styles.boardTable}>
-        <tr className={styles.boardRow}>
-          {boardPiece.map((row) => (
-            <th key={row.toString()} className={styles.boardCol}>
-              {row.map((col) => (
-                <Square id={col} key={col} />
-              ))}
-            </th>
-          ))}
-        </tr>
-      </table> */}
+      {props.boardPiece.flat().map((piece, idx) => {
+        console.log(piece);
+        return (
+          <Square
+            id={idx}
+            key={piece}
+            backgroundColor={BackgroundColor.GREY}
+            pieceColor={props.colorMap[piece]}
+            hasPiece={piece > 0}
+          />
+        );
+      })}
     </div>
   );
 }

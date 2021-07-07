@@ -28,6 +28,7 @@ export class BackgroundColor extends Color {
 }
 
 export class PieceColor extends Color {
+  static readonly NO_COLOR = new PieceColor("", "");
   static readonly BLUE = new PieceColor("#00a8ff", "#008ed8");
   static readonly YELLOW = new PieceColor("#fbc531", "#fab804");
 
